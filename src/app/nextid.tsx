@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { wagmiContractConfig } from "./contracts";
 import Image from "next/image";
 import type { NextPage } from "next";
+import { BaseError } from "viem";
 
 interface MyComponentProps {
   image: boolean;
@@ -17,13 +18,12 @@ const NextTokenId: NextPage<MyComponentProps> = ({ image }) => {
     ...wagmiContractConfig,
     eventName: "Transfer",
     onLogs(logs) {
-      console.log("Transfer event detected:", logs);
-      setTokenId((prev) => (prev !== null ? prev + 1 : null));
+      setTokenId((prev) => (prev !== null ? prev + logs.length : null));
     },
   });
 
   // Fetch the next token ID from the contract
-  const { data, isLoading, isError } = useReadContract({
+  const { data, isLoading, isError, error } = useReadContract({
     ...wagmiContractConfig,
     functionName: "getNextId",
     args: [],
@@ -40,7 +40,8 @@ const NextTokenId: NextPage<MyComponentProps> = ({ image }) => {
   const baseUrl = "https://api.shibaville.io/ville/image/";
 
   if (isLoading) return <p>Loading...</p>;
-  if (isError) return <p>Error reading contract data</p>;
+  if (isError)
+    return <p>Error: {(error as BaseError).shortMessage || error.message}</p>;
 
   return (
     <div>

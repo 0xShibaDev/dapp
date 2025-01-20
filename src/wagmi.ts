@@ -1,5 +1,5 @@
 import { http, cookieStorage, createConfig, createStorage } from "wagmi";
-import { bsc, bscTestnet } from "wagmi/chains";
+import { bsc } from "wagmi/chains";
 import { getDefaultConfig } from "connectkit";
 const projectId = process.env.NEXT_PUBLIC_WC_PROJECT_ID as string;
 
@@ -9,9 +9,7 @@ export const config = createConfig(
     chains: [bsc],
     transports: {
       // RPC URL for each chain
-      [bsc.id]: http(
-        `https://eth-mainnet.g.alchemy.com/v2/${process.env.NEXT_PUBLIC_ALCHEMY_ID}`
-      ),
+      [bsc.id]: http(),
     },
 
     // Required API Keys

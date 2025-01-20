@@ -1,24 +1,6 @@
 export const wagmiContractConfig = {
-  address: "0xaf679EE7904dE8Ad52A3B8e8560cCC57946cB652",
+  address: "0x413950db739e8b3845b3bbab0c2d74a0b92bd5a0",
   abi: [
-    {
-      inputs: [
-        {
-          internalType: "address",
-          name: "to",
-          type: "address",
-        },
-        {
-          internalType: "uint256",
-          name: "tokenId",
-          type: "uint256",
-        },
-      ],
-      name: "approve",
-      outputs: [],
-      stateMutability: "nonpayable",
-      type: "function",
-    },
     {
       inputs: [],
       stateMutability: "nonpayable",
@@ -178,107 +160,6 @@ export const wagmiContractConfig = {
       type: "event",
     },
     {
-      inputs: [],
-      name: "mint",
-      outputs: [
-        {
-          internalType: "uint256",
-          name: "",
-          type: "uint256",
-        },
-      ],
-      stateMutability: "payable",
-      type: "function",
-    },
-    {
-      inputs: [
-        {
-          internalType: "uint256",
-          name: "_amount",
-          type: "uint256",
-        },
-      ],
-      name: "mintBatch",
-      outputs: [
-        {
-          internalType: "uint256",
-          name: "",
-          type: "uint256",
-        },
-      ],
-      stateMutability: "payable",
-      type: "function",
-    },
-    {
-      inputs: [
-        {
-          internalType: "address",
-          name: "from",
-          type: "address",
-        },
-        {
-          internalType: "address",
-          name: "to",
-          type: "address",
-        },
-        {
-          internalType: "uint256",
-          name: "tokenId",
-          type: "uint256",
-        },
-      ],
-      name: "safeTransferFrom",
-      outputs: [],
-      stateMutability: "nonpayable",
-      type: "function",
-    },
-    {
-      inputs: [
-        {
-          internalType: "address",
-          name: "from",
-          type: "address",
-        },
-        {
-          internalType: "address",
-          name: "to",
-          type: "address",
-        },
-        {
-          internalType: "uint256",
-          name: "tokenId",
-          type: "uint256",
-        },
-        {
-          internalType: "bytes",
-          name: "data",
-          type: "bytes",
-        },
-      ],
-      name: "safeTransferFrom",
-      outputs: [],
-      stateMutability: "nonpayable",
-      type: "function",
-    },
-    {
-      inputs: [
-        {
-          internalType: "address",
-          name: "operator",
-          type: "address",
-        },
-        {
-          internalType: "bool",
-          name: "approved",
-          type: "bool",
-        },
-      ],
-      name: "setApprovalForAll",
-      outputs: [],
-      stateMutability: "nonpayable",
-      type: "function",
-    },
-    {
       anonymous: false,
       inputs: [
         {
@@ -307,11 +188,6 @@ export const wagmiContractConfig = {
       inputs: [
         {
           internalType: "address",
-          name: "from",
-          type: "address",
-        },
-        {
-          internalType: "address",
           name: "to",
           type: "address",
         },
@@ -321,7 +197,7 @@ export const wagmiContractConfig = {
           type: "uint256",
         },
       ],
-      name: "transferFrom",
+      name: "approve",
       outputs: [],
       stateMutability: "nonpayable",
       type: "function",
@@ -435,6 +311,38 @@ export const wagmiContractConfig = {
     },
     {
       inputs: [],
+      name: "mint",
+      outputs: [
+        {
+          internalType: "uint256",
+          name: "",
+          type: "uint256",
+        },
+      ],
+      stateMutability: "payable",
+      type: "function",
+    },
+    {
+      inputs: [
+        {
+          internalType: "uint256",
+          name: "_amount",
+          type: "uint256",
+        },
+      ],
+      name: "mintBatch",
+      outputs: [
+        {
+          internalType: "uint256",
+          name: "",
+          type: "uint256",
+        },
+      ],
+      stateMutability: "payable",
+      type: "function",
+    },
+    {
+      inputs: [],
       name: "name",
       outputs: [
         {
@@ -463,6 +371,75 @@ export const wagmiContractConfig = {
         },
       ],
       stateMutability: "view",
+      type: "function",
+    },
+    {
+      inputs: [
+        {
+          internalType: "address",
+          name: "from",
+          type: "address",
+        },
+        {
+          internalType: "address",
+          name: "to",
+          type: "address",
+        },
+        {
+          internalType: "uint256",
+          name: "tokenId",
+          type: "uint256",
+        },
+      ],
+      name: "safeTransferFrom",
+      outputs: [],
+      stateMutability: "nonpayable",
+      type: "function",
+    },
+    {
+      inputs: [
+        {
+          internalType: "address",
+          name: "from",
+          type: "address",
+        },
+        {
+          internalType: "address",
+          name: "to",
+          type: "address",
+        },
+        {
+          internalType: "uint256",
+          name: "tokenId",
+          type: "uint256",
+        },
+        {
+          internalType: "bytes",
+          name: "data",
+          type: "bytes",
+        },
+      ],
+      name: "safeTransferFrom",
+      outputs: [],
+      stateMutability: "nonpayable",
+      type: "function",
+    },
+    {
+      inputs: [
+        {
+          internalType: "address",
+          name: "operator",
+          type: "address",
+        },
+        {
+          internalType: "bool",
+          name: "approved",
+          type: "bool",
+        },
+      ],
+      name: "setApprovalForAll",
+      outputs: [],
+      stateMutability: "nonpayable",
       type: "function",
     },
     {
@@ -527,6 +504,29 @@ export const wagmiContractConfig = {
         },
       ],
       stateMutability: "view",
+      type: "function",
+    },
+    {
+      inputs: [
+        {
+          internalType: "address",
+          name: "from",
+          type: "address",
+        },
+        {
+          internalType: "address",
+          name: "to",
+          type: "address",
+        },
+        {
+          internalType: "uint256",
+          name: "tokenId",
+          type: "uint256",
+        },
+      ],
+      name: "transferFrom",
+      outputs: [],
+      stateMutability: "nonpayable",
       type: "function",
     },
   ],

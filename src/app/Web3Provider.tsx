@@ -1,7 +1,7 @@
 "use client";
 
 import { WagmiProvider, createConfig, http } from "wagmi";
-import { bsc, bscTestnet } from "wagmi/chains";
+import { bsc } from "wagmi/chains";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ConnectKitProvider, getDefaultConfig } from "connectkit";
 import { ReactNode } from "react";
@@ -9,10 +9,10 @@ import { ReactNode } from "react";
 const config = createConfig(
   getDefaultConfig({
     // Your dApps chains
-    chains: [bscTestnet],
+    chains: [bsc],
     transports: {
       // RPC URL for each chain
-      [bscTestnet.id]: http(),
+      [bsc.id]: http(),
     },
 
     // Required API Keys

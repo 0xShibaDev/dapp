@@ -123,13 +123,19 @@ function App() {
                 <NextTokenId image={false} />
               </div>
               <div className="links">
-                <Link className="discordbtn" href="">
+                <Link className="discordbtn" href="https://api.shibaville.io/">
                   METADATA
                 </Link>
-                <Link className="discordbtn" href="">
+                <Link
+                  className="discordbtn"
+                  href="https://shibaville.gitbook.io/shibaville-docs"
+                >
                   DOCS
                 </Link>
-                <Link className="discordbtn" href="">
+                <Link
+                  className="discordbtn"
+                  href="https://github.com/0xShibaDev"
+                >
                   GIT
                 </Link>
               </div>
