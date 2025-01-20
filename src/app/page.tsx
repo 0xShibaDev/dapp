@@ -19,7 +19,7 @@ function App() {
   const [amount, setAmount] = useState(1);
 
   // Memoize contract arguments to avoid unnecessary re-renders
-  const contractArgs = useMemo(() => [BigInt(amount)], [amount]);
+  const contractArgs = useMemo(() => [BigInt(amount)] as const, [amount]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const {
