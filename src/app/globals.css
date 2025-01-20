@@ -1,0 +1,305 @@
+:root {
+  width: 100vw;
+  background-image: url(../../public/Cjl2JM.png);
+  overflow-x: hidden;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a,
+a:active,
+a:focus {
+  text-decoration: none;
+  color: #121212;
+}
+
+@font-face {
+  font-family: "MenuFont";
+  src: url("/menu.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "TextFont";
+  src: url("/text5.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "TitleFont";
+  src: url("/title.ttf") format("truetype");
+}
+
+.backbone {
+  background-image: url(../../public/Cjl2JM.png);
+}
+
+.main {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+
+  background-color: white;
+  padding: 1rem;
+  box-shadow: -8px 8px #000000;
+  font-family: TextFont, sans-serif;
+  border-radius: 8px;
+}
+hr {
+  width: 100%;
+  border: 1px solid #888888;
+}
+.logo {
+  position: relative;
+  width: 128px;
+  height: 128px;
+  padding: 20px;
+}
+
+.links {
+  display: flex;
+  gap: 10px;
+  text-decoration: underline;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.amount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.amount input {
+  text-align: center;
+  font-family: TextFont;
+  font-size: large;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 10px 15px 10px 15px;
+}
+
+.price {
+  text-align: center;
+}
+
+.tokenId {
+  font-size: medium;
+}
+
+.mintButton {
+  width: 100%;
+  font-family: TitleFont;
+  background-color: white;
+  box-shadow: -5px 5px black;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  align-items: center;
+}
+strong {
+  color: white;
+  background-color: black;
+  padding: 2px;
+}
+.header-bot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: small;
+}
+
+.nextToken {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.minting {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mint {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mintbox {
+  padding: 25px;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  box-shadow: -8px 8px black;
+}
+
+.mintsection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.quote {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
+.text {
+  width: 50%;
+  font-size: small;
+}
+
+.discordbtn {
+  padding: 10px 15px 10px 15px;
+  background-color: #ffffff;
+  box-shadow: -4px 4px black;
+  border-radius: 8px;
+  border: 2px solid black;
+}
+.discordbtn:hover {
+  background-color: #f4ede7;
+}
+
+.mintbtn {
+  width: 100%;
+  min-width: 120px;
+  padding: 10px 15px 10px 15px;
+  background-color: #ffffff;
+  box-shadow: -4px 4px black;
+  border-radius: 8px;
+  border: 2px solid black;
+  font-weight: bold;
+}
+.mintbtn:hover {
+  background-color: #f4ede7;
+}
+
+.addbtn {
+  padding: 10px 15px 10px 15px;
+  background-color: #ffffff;
+  box-shadow: -2px 2px black;
+  border-radius: 8px;
+  border: 2px solid black;
+  font-weight: bold;
+}
+.addbtn:hover {
+  background-color: #f4ede7;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+}
+
+@media screen and (max-width: 768px) {
+  .welcome {
+    font-size: small;
+  }
+
+  .mint {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .features {
+    font-size: small;
+  }
+
+  .gameplay {
+    font-size: small;
+  }
+
+  .plan {
+    font-size: small;
+  }
+
+  .last {
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .welcome {
+    font-size: small;
+  }
+
+  .mint {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .features {
+    font-size: small;
+  }
+
+  .gameplay {
+    font-size: small;
+  }
+
+  .plan {
+    font-size: small;
+  }
+
+  .last {
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .welcome {
+    font-size: small;
+  }
+
+  .mint {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .features {
+    font-size: medium;
+  }
+
+  .gameplay {
+    font-size: medium;
+  }
+
+  .plan {
+    font-size: medium;
+  }
+
+  .last {
+    font-size: medium;
+  }
+}
