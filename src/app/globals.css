@@ -134,11 +134,14 @@ strong {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 16px;
+  gap: 20px;
 }
 
 .mint {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 64px;
   align-items: center;
 }
 
@@ -155,14 +158,8 @@ strong {
   align-items: center;
 }
 
-.quote {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-style: italic;
-}
-
 .text {
-  width: 50%;
-  font-size: small;
+  font-size: medium;
 }
 
 .discordbtn {
@@ -207,6 +204,14 @@ strong {
   justify-content: center;
   align-items: center;
   height: 100px;
+}
+
+.last {
+  margin-bottom: 16px;
+}
+
+.socials {
+  margin-bottom: 16px;
 }
 
 /* ----------- Non-Retina Screens ----------- */
@@ -275,7 +280,7 @@ strong {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1466px) {
   .welcome {
     font-size: small;
   }
@@ -285,6 +290,7 @@ strong {
     flex-direction: column-reverse;
     justify-content: space-around;
     align-items: center;
+    gap: 64px;
   }
 
   .features {

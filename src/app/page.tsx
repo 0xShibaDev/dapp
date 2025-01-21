@@ -123,18 +123,24 @@ function App() {
                 <NextTokenId image={false} />
               </div>
               <div className="links">
-                <Link className="discordbtn" href="https://api.shibaville.io/">
+                <Link
+                  className="discordbtn"
+                  href="https://api.shibaville.io/"
+                  target="blank"
+                >
                   METADATA
                 </Link>
                 <Link
                   className="discordbtn"
                   href="https://shibaville.gitbook.io/shibaville-docs"
+                  target="blank"
                 >
                   DOCS
                 </Link>
                 <Link
                   className="discordbtn"
                   href="https://github.com/0xShibaDev"
+                  target="blank"
                 >
                   GIT
                 </Link>
@@ -325,13 +331,24 @@ function App() {
           <hr />
           <div className="minting" id="minting">
             <h2>Ready to Mint?</h2>
+
+            <Link
+              href="https://bscscan.com/address/0x413950db739e8b3845b3bbab0c2d74a0b92bd5a0"
+              target="blank"
+            >
+              Contract(ERC721): 0x413950db739e8b3845b3bbab0c2d74a0b92bd5a0
+            </Link>
+
             <div className="mint">
               <div className="text">
-                <h3>0xShiba</h3>
-                <div className="quote">
-                  Every decision in ShibaVille matters. So, are you ready to
-                  design your Ville, defend it with pride, and conquer your way
-                  to glory? Let’s see what you’ve got!
+                <div className="info">
+                  <p>Metadata: Revealed</p>
+                  <p>
+                    Increment for each NFT mint:<strong>0.0001 BNB</strong>
+                  </p>
+                  <p>
+                    Limit per transaction: <strong>50 NFT</strong>
+                  </p>
                 </div>
               </div>
               <div className="mintbox">
@@ -408,13 +425,17 @@ function App() {
             </p>
           </div>
           <div className="socials">
-            <Link className="discordbtn" href="https://discord.gg/BwWB9HkFPy">
+            <Link
+              className="discordbtn"
+              href="https://discord.gg/BwWB9HkFPy"
+              target="blank"
+            >
               Discord server
             </Link>
           </div>
         </div>
         <div className="footer">
-          <Link href="https://x.com/ShibaVille_io">
+          <Link href="https://x.com/ShibaVille_io" target="blank">
             <strong>X</strong>
           </Link>
         </div>
